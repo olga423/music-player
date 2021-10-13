@@ -1,0 +1,235 @@
+@keyframes run-text { 
+  75%{
+        transform: translate3d(-50%, 0, 0);
+    }
+  100%{
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+body {
+	font-family: 'Nunito', sans-serif;
+    background-color: #FFFFE0; 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;  
+    transition: background-color 1s;
+}
+img {
+    width: 100%;
+	display: block;
+	object-fit: cover;
+    border-radius: 20px;
+}  
+.active {
+	background-color: #463D72;
+	border-radius: 5px;
+}
+.audio {
+    display: none !important;
+}
+.player {
+	display: flex;
+	flex-direction: column;
+	width: 380px;
+	height: 465px;
+	overflow: hidden;
+	border-radius: 20px;
+    background-color: #332A5F  /* #1D1449*/;
+}
+.player__header {
+	position: relative;
+    height: 140px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+    align-items: flex-start;
+	flex-shrink: 0; 
+	background-color: #332A5F;
+	z-index: 5;
+	width: 100%;
+	border-radius: 20px;
+	padding: 20px 25px 0px 25px;
+	box-shadow: inset  0px 0px 10px 3px #6c6492;
+	transition: height 1s, box-shadow 1s, padding 1s ease-in-out;
+}
+.open-header {
+    padding: 0;
+    height: 100%;
+    box-shadow: none;
+ }
+.player__img  {
+	width: 65px;
+	height: 65px;
+	border-radius: 20px;
+}
+.player__header .slider__img {
+    height: 100%;
+}
+.player__img--position {
+	position: absolute;
+	top: 20px;
+    left: 27px;
+    width: 80px;
+    height: 80px;
+    transition: width 1s ease-in-out, top 1s ease-in-out, left 1s ease-in-out, height 1s ease-in-out;
+}
+.open-pos {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 320px;
+ }
+.player__icon {
+	top: 26px;
+    z-index: 50;
+    position: absolute;
+    color: #FD5F51;
+    right: 26px;
+    cursor: pointer;
+}
+.player__header .player__context {
+	text-align: center;
+    line-height: 1.6;
+    width: 60%;
+    transition: width 1s;
+}
+.player__context {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.player__controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 82%;
+	transition: width 0.5s;
+}
+.open-panel {
+    width: 93%;
+    transform: translate3d(-14px , 315% , 0);
+ }
+.player__button i {
+	 font-size: 16px;
+	 cursor: pointer;
+     color: #7f7b93;
+}
+#play{
+    padding: 0 30px 0 30px;
+    font-size: 18px;
+}
+#pause {
+    display: none;
+}
+.slider__name, .slider__title {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slider__name {
+    font-size: 17px;
+    color: #F1F1F1;
+}
+.slider__title {
+    font-size: 16px;
+    color: #B5B5B5;
+}
+.list {
+    list-style-type: none;
+     margin: 0;
+}
+.player__playlist {
+     height: 100%;
+     overflow: auto;   
+     padding: 30px 20px 0 20px;
+}
+/*     полоса прокрутки    */
+.player__playlist {
+    scrollbar-width: none; /* Firefox */
+}
+.player__playlist::-webkit-scrollbar {
+    width: 5px;
+}
+.player__playlist::-webkit-scrollbar-track {
+     background-color: transparent;
+}
+.player__playlist::-webkit-scrollbar-thumb {
+     background-color: #FD5F51;
+     border-radius: 10px;
+     border: transparent;
+}
+/*********************************/
+.player__song {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	margin-bottom: 10px;
+	cursor: pointer;
+	padding: 10px 5px;
+    transition: background-color 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+}
+.player__song:hover {
+    background-color: #463D72;
+    border-radius: 5px;
+}
+.player__name {
+    font-size: 17px;
+    color: #F1F1F1;
+}
+.player__title {
+	font-size: 15px;
+    color: #B5B5B5;
+}
+.player__song-time {
+	padding-top: 20px;
+	font-size: 13px;
+    color: #7E7E7E;
+}
+/*   progress   */
+.progress {
+    position: relative;
+    width: 60%;
+    height: 3px;
+    background-color: #72699E;
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: width 1s;
+      }
+ .progress__time {
+     position: relative;
+     width: 0%;
+     height: 3px;
+     background-color: #FD5F51;
+     display: flex;
+     align-items: center;
+     border-radius: inherit;
+      }
+.progress__time::before {
+     content: '';
+     position: absolute;
+     right: 0;
+     border-radius: 50%;
+     width: 10px;
+     height: 10px;
+     background-color: #FD5F51;
+     border: 2px solid #FD5F51;
+      }
+ /************************/
+
+.text-wrap {
+    display: block ;
+    white-space: pre ;
+    width: max-content;
+    animation: run-text 7s infinite ;
+}
+
+ 
+ 
+ 
+ 
+

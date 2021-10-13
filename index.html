@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Music player</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6cf4f3ca3c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="player">
+    <div class="player__header">
+        <div class=" player__img--position">
+           <img class="slider__img">
+        </div> 
+        <div class="player__controls">
+           <p class="player__context">
+              <strong class="slider__name"></strong>
+              <span class="slider__title"></span>
+           </p>
+           <div class="progress">
+              <div class="progress__time"></div>
+           </div>
+           <div class="player__button ">
+             <i class="fas fa-backward" id="back"></i>
+             <i class="fas fa-play" id="play"></i>
+             <i class="fas fa-forward" id="next"></i>
+           </div>
+        </div>
+        <i class="fas fa-expand-arrows-alt fa-lg  player__icon"></i>
+   </div>
+   <ul class="player__playlist list"></ul>
+</div>
+<script src="js/songs.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
