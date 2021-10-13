@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+Thumbs.db
+ehthumbs.db
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+Desktop.ini
 
-# Precompiled Headers
-*.gch
-*.pch
+$RECYCLE.BIN/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+*.cab
+*.msi
+*.msm
+*.msp
 
-# Fortran module files
-*.mod
-*.smod
+*.lnk
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# Executables
-*.exe
-*.out
-*.app
+._*
+
+.Spotlight-V100
+.Trashes
+
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
